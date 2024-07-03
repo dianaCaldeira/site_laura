@@ -6,18 +6,13 @@ import Img02 from '../../assets/Img 02.png';
 import Img03 from '../../assets/Img 03.png';
 import Img04 from '../../assets/Img 04.png';
 import Img05 from '../../assets/Img 05.png';
-
-interface Comment {
-  id: string;
-  name: string;
-  comment: string;
-}
+import { Comment, BlogPost } from '../../Type';
 
 const Blog: React.FC = () => {
   const [comments, setComments] = useState<Record<number, Comment[]>>({});
   const [ratings, setRatings] = useState<Record<number, number[]>>({});
 
-  const blogPosts = [
+  const blogPosts: BlogPost[] = [
     {
       id: 1,
       title: 'Como funciona a consulta com o Neuropediatra?',
@@ -121,18 +116,17 @@ const Blog: React.FC = () => {
       imageUrl: Img05,
     },
   ];
-   const handleCommentSubmit = (postId: number, commentData: any) => {
-    const newComment: Comment = {
-      id: Date.now().toString(),
-      ...commentData,
-    };
+
+  const handleCommentSubmit = (postId: number, commentData: any) => {
+    // Lógica para lidar com o envio de comentários
     setComments((prevComments) => ({
       ...prevComments,
-      [postId]: [...(prevComments[postId] || []), newComment],
+      [postId]: [...(prevComments[postId] || []), commentData],
     }));
   };
 
   const handleRatingSubmit = (postId: number, rating: number) => {
+    // Lógica para lidar com o envio de avaliações
     setRatings((prevRatings) => ({
       ...prevRatings,
       [postId]: [...(prevRatings[postId] || []), rating],
@@ -145,8 +139,8 @@ const Blog: React.FC = () => {
       <BlogList
         posts={blogPosts}
         comments={comments}
-        onCommentSubmit={handleCommentSubmit}
         ratings={ratings}
+        onCommentSubmit={handleCommentSubmit}
         onRatingSubmit={handleRatingSubmit}
       />
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './BlogCard.css';
-import CommentForm from '../CommentForm/CommentForm';
-import CommentList from '../CommentList/CommentList';
+// import CommentForm from '../CommentForm/CommentForm';
+// import CommentList from '../CommentList/CommentList';
 import Rating from '../Rating/Rating';
 
 interface Comment {
@@ -57,8 +57,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
         </div>
       </div>
       <Rating ratings={ratings} onRatingSubmit={onRatingSubmit} />
-      <CommentForm onSubmit={onCommentSubmit} />
-      <CommentList comments={comments} />
+      {/* <CommentForm onSubmit={onCommentSubmit} />
+      <CommentList comments={comments} /> */}
     </div>
   );
 };

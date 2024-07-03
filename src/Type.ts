@@ -1,10 +1,12 @@
-// Type.ts
+export interface Comment {
+  id: string;
+  name: string;
+  comment: string;
+}
 
-export interface Blog {
+export interface BlogPost {
   id: number;
   title: string;
-  summary: string;
-  content: string;
-  author: string;
-  publishedAt: string;
+  content: React.ReactNode;
+  imageUrl: string;
 }

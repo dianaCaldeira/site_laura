@@ -1,33 +1,21 @@
 import React from 'react';
 import './BlogList.css';
 import BlogCard from '../../components/BlogCard/BlogCard';
-
-interface Comment {
-  id: string;
-  name: string;
-  comment: string;
-}
-
-interface BlogPost {
-  id: number;
-  title: string;
-  content: React.ReactNode;
-  imageUrl: string;
-}
+import { Comment, BlogPost } from '../../Type';
 
 interface BlogListProps {
   posts: BlogPost[];
   comments: Record<number, Comment[]>;
-  onCommentSubmit: (postId: number, commentData: any) => void;
   ratings: Record<number, number[]>;
+  onCommentSubmit: (postId: number, commentData: any) => void;
   onRatingSubmit: (postId: number, rating: number) => void;
 }
 
 const BlogList: React.FC<BlogListProps> = ({
   posts,
   comments,
-  onCommentSubmit,
   ratings,
+  onCommentSubmit,
   onRatingSubmit,
 }) => {
   return (
@@ -39,8 +27,8 @@ const BlogList: React.FC<BlogListProps> = ({
           content={post.content}
           imageUrl={post.imageUrl}
           comments={comments[post.id] || []}
-          onCommentSubmit={(commentData: any) => onCommentSubmit(post.id, commentData)}
           ratings={ratings[post.id] || []}
+          onCommentSubmit={(commentData: any) => onCommentSubmit(post.id, commentData)}
           onRatingSubmit={(rating: number) => onRatingSubmit(post.id, rating)}
         />
       ))}

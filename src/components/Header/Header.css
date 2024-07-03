@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+  flex-wrap: wrap;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header__nav-item {
+  display: inline-block;
+}
+
+.header__nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 35px; /* Aumente o tamanho da fonte conforme desejado */
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: #007bff;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.passarinho01 {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.passarinho01 img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header__nav-list {
+    gap: 10px;
+  }
+
+  .header__nav-link {
+    font-size: 20px; /* Ajuste o tamanho da fonte para telas menores */
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+
+  .passarinho01 {
+    max-width: 150px;
+  }
+}

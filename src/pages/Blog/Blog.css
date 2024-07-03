@@ -1,0 +1,16 @@
+.blog-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blog-page h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .blog-page h1 {
+    font-size: 24px;
+  }
+}

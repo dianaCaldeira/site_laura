@@ -1,13 +1,40 @@
-footer {
+.footer {
   background-color: #97A478;
-  color: #000000;
+  color: #000;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
 }
 
+.footer__text {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #000;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #007bff;
+}
+
 @media screen and (max-width: 600px) {
-  footer {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer__text {
     font-size: 12px;
+  }
+
+  .footer-social a {
+    margin: 0 5px;
   }
 }

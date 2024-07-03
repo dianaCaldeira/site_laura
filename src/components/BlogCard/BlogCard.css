@@ -27,9 +27,14 @@
 
 .blog-card-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 300px; /* Limitar a largura máxima */
   height: auto;
   margin-bottom: 10px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center; /* Centralizar a imagem horizontalmente */
 }
 
 @media screen and (max-width: 600px) {
@@ -39,5 +44,9 @@
 
   .blog-card p {
     font-size: 14px;
+  }
+
+  .blog-card-image {
+    max-width: 100%; /* Garante que a imagem não exceda a largura da tela em dispositivos móveis */
   }
 }

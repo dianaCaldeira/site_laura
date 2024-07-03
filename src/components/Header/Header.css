@@ -24,7 +24,7 @@
 .header__nav-link {
   color: #333;
   text-decoration: none;
-  font-size: 35px; /* Aumente o tamanho da fonte conforme desejado */
+  font-size: 35px;
   transition: color 0.3s ease;
 }
 
@@ -62,7 +62,7 @@
   }
 
   .header__nav-link {
-    font-size: 20px; /* Ajuste o tamanho da fonte para telas menores */
+    font-size: 20px;
   }
 
   .logo {

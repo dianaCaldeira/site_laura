@@ -7,7 +7,7 @@ const Footer: React.FC = () => (
     <p className="footer__text">&copy; 2024 Neuropediatra Laura T. Todos os direitos reservados.</p>
     <p className="footer__text">CRM: 78673</p>
     <div className="footer-social">
-      <a href="https://www.instagram.com/seu_instagram" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/lauraneuroped/" target="_blank" rel="noopener noreferrer">
         <FaInstagram size={24} />
       </a>
     </div>

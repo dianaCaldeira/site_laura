@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
       <h1 className="contact-heading">Entre em Contato</h1>
       <div className="contact-page">
         <p>
-          Estamos aqui para atender você e sua família. Para marcar uma consulta ou esclarecer dúvidas com a Dra. Laura, entre em contato conosco:
+          Estamos aqui para atender você e sua família. Para marcar uma consulta ou esclarecer dúvidas, entre em contato:
         </p>
         <ul>
           <li>
@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
             <strong>Endereço:</strong> Rua Turquesa, 347 - Prado, Belo Horizonte - MG
           </li>
         </ul>
-        <p>Ficaremos felizes em atendê-lo e cuidar da saúde do seu filho.</p>
+        <p>Será um prazer atendê-los e cuidar da saúde dos seus filhos.</p>
         <div className="map-container">
           <iframe
             title="Localização do consultório da Dra. Laura Thiersch"

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-page">
-      <h1 className="welcome-heading">Bem-vindo</h1>
+      <h1 className="welcome-heading">SEJAM BEM-VINDOS</h1>
       <div className="home-content">
         <div className="home-image">
           <img src={Laura01} alt="Dra. Laura Thiersch" />

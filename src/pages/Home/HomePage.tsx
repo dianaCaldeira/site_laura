@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import Button from '../../components/Button/Button';
 import Laura01 from '../../assets/Laura01.png';
-import Passarinho02 from '../../assets/Passarinho02.jpeg';
+import Laura02 from '../../assets/Laura02.png';
 
 const Home: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 
       <div className="when-to-see-neuropediatra">
         <div className="neuropediatra-image">
-          <img src={Passarinho02} alt="Passarinho" />
+          <img src={Laura02} alt="Passarinho" />
         </div>
         <div className="neuropediatra-text">
           <h2>Quando procurar um Neuropediatra?</h2>
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-     <div className="faq-container">
+      <div className="faq-container">
         <h2>Perguntas Frequentes</h2>
         <div className="faq-topics">
           <div className="faq-topic">

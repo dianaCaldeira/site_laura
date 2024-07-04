@@ -59,6 +59,7 @@
 .logo {
   max-width: 120px;
   margin-bottom: 0;
+  transition: max-width 0.3s ease;
 }
 
 .logo img {
@@ -110,7 +111,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 60px; /* Defina uma altura fixa para o cabeçalho em telas menores */
+    height: 60px;
+    padding: 5px 10px;
   }
 
   .header__content {
@@ -118,6 +120,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    order: 2;
   }
 
   .header__nav {
@@ -150,6 +153,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    order: 1;
   }
 
   .menu-icon {
@@ -161,7 +165,7 @@
   }
 
   .logo {
-    max-width: 100px;
+    max-width: 80px;
     margin-bottom: 0;
   }
 

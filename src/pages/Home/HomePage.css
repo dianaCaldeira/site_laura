@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Berose Demo';
+  src: url('../../fonts/BEROSE DEMO.TTF') format('truetype');
+}
+
+.home-page {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .home-content {
   display: flex;
   align-items: center;
@@ -28,7 +37,6 @@
   padding: 30px;
   border-radius: 10px;
   flex: 1;
-  text-align: center;
   position: relative;
   z-index: 2;
   margin-left: -100px;
@@ -36,27 +44,33 @@
   margin-bottom: 20px;
 }
 
+.home-text h1, .home-text h2, .when-to-see-neuropediatra h2, .faq-container h2, .faq-topic h3 {
+  font-family: 'Berose Demo', cursive;
+  text-align: center;
+}
+
 .home-text h1 {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .home-text h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .home-text p {
-  font-size: 18px;
+  font-size: 16px;
+  text-align: left;
 }
 
 .home-text ul {
   list-style-type: none;
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .home-text li {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .home-image {
@@ -128,19 +142,22 @@
   position: relative;
   z-index: 2;
   order: 1;
-  text-align: center;
 }
 
 .neuropediatra-text h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.neuropediatra-text p, .neuropediatra-text ul {
+  text-align: left;
 }
 
 .neuropediatra-text ul {
   margin-top: 10px;
-  padding-left: 0;
-  list-style-type: none;
-  text-align: center;
+  padding-left: 20px;
+  list-style-type: disc;
 }
 
 .neuropediatra-text li {
@@ -152,7 +169,6 @@
   padding: 40px;
   position: relative;
   z-index: 1;
-  text-align: center;
 }
 
 .faq-container::before {
@@ -173,6 +189,7 @@
 .faq-container h2 {
   font-size: 28px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .faq-image {
@@ -199,17 +216,18 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
 .faq-topic h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .faq-topic p {
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
@@ -220,8 +238,8 @@
 
   .home-text {
     margin-left: 0;
-    padding-left: 0;
-    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .home-image {

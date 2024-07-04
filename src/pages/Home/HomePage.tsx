@@ -46,6 +46,9 @@ const Home: React.FC = () => {
             <li>Distúrbios do sono;</li>
             <li>Doenças genéticas e metabólicas.</li>
           </ul>
+          <div className="button-container">
+            <Button to="/servicos" text="Agende uma consulta" />
+          </div>
         </div>
       </div>
 
@@ -78,6 +81,12 @@ const Home: React.FC = () => {
               Diagnosticar e tratar corretamente o TDAH é de extrema importância, uma vez que o comprometimento funcional causado pelo transtorno acarreta em piora da qualidade de vida do paciente.
             </p>
           </div>
+        </div>
+        <div className="button-container">
+          <Button 
+            to="https://wa.me/5531XXXXXXXXX" 
+            text="Agende uma consulta" 
+          />
         </div>
       </div>
     </div>

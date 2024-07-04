@@ -192,6 +192,14 @@
   text-align: left;
 }
 
+.when-to-see-neuropediatra .button-container {
+  margin-top: 30px;
+}
+
+.faq-container .button-container {
+  margin-top: 40px;
+}
+
 @media screen and (max-width: 600px) {
   .home-content {
     padding: 20px;
@@ -229,5 +237,10 @@
 
   .faq-topics {
     grid-template-columns: 1fr;
+  }
+
+  .when-to-see-neuropediatra .button-container,
+  .faq-container .button-container {
+    margin-top: 20px;
   }
 }

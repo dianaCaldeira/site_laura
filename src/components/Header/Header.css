@@ -110,6 +110,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 60px; /* Defina uma altura fixa para o cabeçalho em telas menores */
   }
 
   .header__content {

@@ -2,15 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 15px; /* Reduzido o padding */
   background-color: #f8f8f8;
   flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+.header.floating {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header__nav-list {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 20px; /* Reduzido o gap */
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -24,7 +34,7 @@
 .header__nav-link {
   color: #333;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 28px; /* Reduzido o tamanho da fonte */
   transition: color 0.3s ease;
 }
 
@@ -33,8 +43,8 @@
 }
 
 .logo {
-  max-width: 150px;
-  margin-bottom: 10px;
+  max-width: 120px; /* Reduzido o tamanho máximo */
+  margin-bottom: 0;
 }
 
 .logo img {
@@ -43,8 +53,11 @@
 }
 
 .passarinho01 {
-  max-width: 250px;
-  margin-bottom: 10px;
+  max-width: 200px; /* Reduzido o tamanho máximo */
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: -60px; /* Ajuste este valor conforme necessário */
 }
 
 .passarinho01 img {
@@ -52,24 +65,94 @@
   height: auto;
 }
 
-@media screen and (max-width: 600px) {
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.language-selector {
+  display: flex;
+  gap: 5px; /* Reduzido o gap */
+}
+
+.language-selector button {
+  background: none;
+  border: 1px solid #333;
+  padding: 3px 8px; /* Reduzido o padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Reduzido o tamanho da fonte */
+}
+
+.language-selector button:hover,
+.language-selector button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Ajuste o padding-top do body */
+body {
+  padding-top: 60px; /* Ajuste este valor conforme a altura do seu header */
+}
+
+@media screen and (max-width: 768px) {
   .header {
-    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__nav {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 60px; /* Ajustado para a nova altura do header */
+    left: 0;
+    background-color: #f8f8f8;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .header__nav.open {
+    display: block;
   }
 
   .header__nav-list {
+    flex-direction: column;
     gap: 10px;
   }
 
   .header__nav-link {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    background-color: #f8f8f8;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .logo {
     max-width: 100px;
+    margin-bottom: 0;
+  }
+
+  .language-selector {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
   }
 
   .passarinho01 {
-    max-width: 150px;
+    display: none; /* Oculta o passarinho em telas menores */
   }
 }

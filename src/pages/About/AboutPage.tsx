@@ -21,7 +21,7 @@ const About: React.FC = () => {
             Minha formação em Neurologia Infantil no Hospital Infantil João Paulo II (CGP), maior hospital pediátrico de Minas Gerais, me garantiu experiência em casos ambulatoriais e hospitalares. Além disso, me deu segurança para condução de diversos casos da neuropediatria, inclusive doenças raras.
           </p>
           <p>
-            Hoje, atuo como pediatra do corpo clínico do Hospital das Clínicas da UFMG e neuropediatra no Hospital Regional de Betim e no Hospital Infantil Padre Anchieta.
+            Hoje, atuo como pediatra do corpo clínico do Hospital das Clínicas da UFMG e neuropediatra no Hospital Infantil Padre Anchieta.
           </p>
           <p>
             Meus atendimentos são na clínica Alegrart. Será um prazer cuidar da sua criança! Fiquem à vontade para dúvidas e para entrar em contato por aqui!

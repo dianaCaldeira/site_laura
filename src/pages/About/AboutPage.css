@@ -6,6 +6,7 @@
 .about-page {
   margin-top: 80px;
   font-family: 'Times New Roman', Times, serif;
+  padding-bottom: 60px; /* Adicionado para dar espaço ao footer */
 }
 
 .about-content {
@@ -29,7 +30,6 @@
   background-position: center;
   filter: blur(5px);
   z-index: -1;
-  transform: scale(1.2);
 }
 
 .about-text {

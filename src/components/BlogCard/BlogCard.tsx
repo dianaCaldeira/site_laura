@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import './BlogCard.css';
 import Rating from '../Rating/Rating';
-
-interface Comment {
-  id: string;
-  name: string;
-  comment: string;
-}
+import { Comment } from '../../Type';
 
 interface BlogCardProps {
+  id: number;
   title: string;
   content: React.ReactNode;
   imageUrl: string;
   comments: Comment[];
-  onCommentSubmit: (commentData: any) => void;
   ratings: number[];
+  onCommentSubmit: (commentData: any) => void;
   onRatingSubmit: (rating: number) => void;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
+  id,
   title,
   content,
   imageUrl,
   comments,
-  onCommentSubmit,
   ratings,
-  onRatingSubmit,
+  onCommentSubmit,
+  onRatingSubmit
 }) => {
   const [showFullContent, setShowFullContent] = useState(false);
 
@@ -33,13 +30,20 @@ const BlogCard: React.FC<BlogCardProps> = ({
     setShowFullContent((prevState) => !prevState);
   };
 
-  const contentString = content ? (content as React.ReactElement).props.children.map((child: React.ReactNode) => {
-    if (typeof child === 'string') return child;
-    if (React.isValidElement(child) && child.props.children) return child.props.children;
+  // Função para extrair texto do conteúdo React
+  const extractTextContent = (node: React.ReactNode): string => {
+    if (typeof node === 'string') return node;
+    if (Array.isArray(node)) return node.map(extractTextContent).join(' ');
+    if (React.isValidElement(node)) {
+      if ('children' in node.props) {
+        return extractTextContent(node.props.children);
+      }
+    }
     return '';
-  }).join(' ') : '';
+  };
 
-  const summary = contentString.slice(0, 300) + '...';
+  const contentText = extractTextContent(content);
+  const summary = contentText.slice(0, 200) + '...';
 
   return (
     <div className="blog-card">
@@ -49,13 +53,21 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <h2>{title}</h2>
       <div className="card-content">
         <div className="card-text">
-          {showFullContent ? content : <p>{summary}</p>}
-          <button onClick={toggleFullContent} className="read-more-btn">
-            {showFullContent ? 'Ler menos' : 'Ler mais'}
-          </button>
+          {showFullContent ? (
+            <>
+              {content}
+              <button onClick={toggleFullContent} className="read-more-btn">Ler menos</button>
+            </>
+          ) : (
+            <>
+              <p>{summary}</p>
+              <button onClick={toggleFullContent} className="read-more-btn">Ler mais</button>
+            </>
+          )}
         </div>
       </div>
-      <Rating ratings={ratings} onRatingSubmit={onRatingSubmit} />
+      <Rating postId={id} ratings={ratings} onRatingSubmit={onRatingSubmit} />
+      {/* Você pode adicionar um componente de comentários aqui se desejar */}
     </div>
   );
 };

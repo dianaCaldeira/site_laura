@@ -118,7 +118,6 @@ const Blog: React.FC = () => {
   ];
 
   const handleCommentSubmit = (postId: number, commentData: any) => {
-    // Lógica para lidar com o envio de comentários
     setComments((prevComments) => ({
       ...prevComments,
       [postId]: [...(prevComments[postId] || []), commentData],
@@ -126,7 +125,6 @@ const Blog: React.FC = () => {
   };
 
   const handleRatingSubmit = (postId: number, rating: number) => {
-    // Lógica para lidar com o envio de avaliações
     setRatings((prevRatings) => ({
       ...prevRatings,
       [postId]: [...(prevRatings[postId] || []), rating],

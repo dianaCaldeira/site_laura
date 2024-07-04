@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       const logoWidth = document.querySelector('.logo')?.clientWidth || 0;
       const navWidth = document.querySelector('.header__nav')?.clientWidth || 0;
       const languageSelectorWidth = document.querySelector('.language-selector')?.clientWidth || 0;
-      const passarinhoWidth = 200; // Reduzido o tamanho máximo do passarinho
+      const passarinhoWidth = 200;
 
       const availableSpace = headerWidth - (logoWidth + navWidth + languageSelectorWidth);
       setShowPassarinho(availableSpace >= passarinhoWidth);
@@ -54,28 +54,32 @@ const Header: React.FC = () => {
           <img src={Logo} alt='Logo' />
         </Link>
       </div>
-      <nav className={`header__nav ${isMenuOpen ? 'open' : ''}`}>
-        <ul className="header__nav-list">
-          <li className="header__nav-item">
-            <Link to="/" className="header__nav-link" onClick={toggleMenu}>{t('home')}</Link>
-          </li>
-          <li className="header__nav-item">
-            <Link to="/blog" className="header__nav-link" onClick={toggleMenu}>{t('blog')}</Link>
-          </li>
-          <li className="header__nav-item">
-            <Link to="/about" className="header__nav-link" onClick={toggleMenu}>{t('about')}</Link>
-          </li>
-          <li className="header__nav-item">
-            <Link to="/contact" className="header__nav-link" onClick={toggleMenu}>{t('contact')}</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="language-selector">
-        <button onClick={() => changeLanguage('pt')} className={i18n.language === 'pt' ? 'active' : ''}>PT</button>
-        <button onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>EN</button>
+      <div className="header__content">
+        <nav className={`header__nav ${isMenuOpen ? 'open' : ''}`}>
+          <ul className="header__nav-list">
+            <li className="header__nav-item">
+              <Link to="/" className="header__nav-link" onClick={toggleMenu}>{t('home')}</Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/blog" className="header__nav-link" onClick={toggleMenu}>{t('blog')}</Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/about" className="header__nav-link" onClick={toggleMenu}>{t('about')}</Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/contact" className="header__nav-link" onClick={toggleMenu}>{t('contact')}</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div className="menu-icon" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      <div className="header__actions">
+        <div className="language-selector">
+          <button onClick={() => changeLanguage('pt')} className={i18n.language === 'pt' ? 'active' : ''}>PT</button>
+          <button onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>EN</button>
+        </div>
+        <div className="menu-icon" onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
       {showPassarinho && (
         <div className="passarinho01">

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './BlogCard.css';
-// import CommentForm from '../CommentForm/CommentForm';
-// import CommentList from '../CommentList/CommentList';
 import Rating from '../Rating/Rating';
 
 interface Comment {
@@ -35,8 +33,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
     setShowFullContent((prevState) => !prevState);
   };
 
-  const contentString = content ? content.toString() : '';
-  const summary = contentString.slice(0, 200) + '...';
+  const contentString = content ? (content as React.ReactElement).props.children.map((child: React.ReactNode) => {
+    if (typeof child === 'string') return child;
+    if (React.isValidElement(child) && child.props.children) return child.props.children;
+    return '';
+  }).join(' ') : '';
+
+  const summary = contentString.slice(0, 300) + '...';
 
   return (
     <div className="blog-card">
@@ -46,19 +49,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <h2>{title}</h2>
       <div className="card-content">
         <div className="card-text">
-          {showFullContent ? (
-            content
-          ) : (
-            <>
-              {summary}
-              <button onClick={toggleFullContent}>Ler mais</button>
-            </>
-          )}
+          {showFullContent ? content : <p>{summary}</p>}
+          <button onClick={toggleFullContent} className="read-more-btn">
+            {showFullContent ? 'Ler menos' : 'Ler mais'}
+          </button>
         </div>
       </div>
       <Rating ratings={ratings} onRatingSubmit={onRatingSubmit} />
-      {/* <CommentForm onSubmit={onCommentSubmit} />
-      <CommentList comments={comments} /> */}
     </div>
   );
 };

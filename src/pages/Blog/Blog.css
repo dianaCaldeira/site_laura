@@ -1,16 +1,40 @@
 .blog-page {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 120px auto 0;
   padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-page h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-family: 'Berose Demo', cursive;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.blog-page p, .blog-page li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.blog-page ul, .blog-page ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 600px) {
+  .blog-page {
+    margin-top: 100px;
+  }
+
   .blog-page h1 {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .blog-page p, .blog-page li {
+    font-size: 16px;
   }
 }

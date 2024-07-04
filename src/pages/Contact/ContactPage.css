@@ -1,32 +1,53 @@
 .contact-page {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 120px auto 0; /* Aumentado o margin-top para dar espaço entre o header e o conteúdo */
   padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #F7BF3C; /* Adicionado fundo amarelo */
+  border-radius: 10px; /* Adicionado para suavizar as bordas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionado para dar um leve efeito de elevação */
 }
 
 .contact-page h1 {
+  font-family: 'Berose Demo', cursive;
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333; /* Adicionado para melhorar o contraste */
 }
 
 .contact-page p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #333; /* Adicionado para melhorar o contraste */
 }
 
 .contact-page ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .contact-page li {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #333; /* Adicionado para melhorar o contraste */
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
+  .contact-page {
+    margin-top: 100px; /* Ajustado para telas menores */
+    padding: 15px; /* Reduzido o padding para telas menores */
+  }
+
   .contact-page h1 {
     font-size: 24px;
   }

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import Logo from '../../assets/Logo01.png';
 import Passarinho01 from '../../assets/Passarinho01.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { scrollToTop } from '../../utils/scrollUtils';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showPassarinho, setShowPassarinho] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,6 +20,12 @@ const Header: React.FC = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+  };
+
+  const handleNavClick = (path: string) => {
+    navigate(path);
+    scrollToTop();
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -50,24 +58,24 @@ const Header: React.FC = () => {
   return (
     <header className={`header ${isScrolled ? 'floating' : ''}`}>
       <div className="logo">
-        <Link to="/">
+        <button onClick={() => handleNavClick('/')} className="logo-button">
           <img src={Logo} alt='Logo' />
-        </Link>
+        </button>
       </div>
       <div className="header__content">
         <nav className={`header__nav ${isMenuOpen ? 'open' : ''}`}>
           <ul className="header__nav-list">
             <li className="header__nav-item">
-              <Link to="/" className="header__nav-link" onClick={toggleMenu}>{t('home')}</Link>
+              <button onClick={() => handleNavClick('/')} className="header__nav-link">{t('home')}</button>
             </li>
             <li className="header__nav-item">
-              <Link to="/blog" className="header__nav-link" onClick={toggleMenu}>{t('blog')}</Link>
+              <button onClick={() => handleNavClick('/blog')} className="header__nav-link">{t('blog')}</button>
             </li>
             <li className="header__nav-item">
-              <Link to="/about" className="header__nav-link" onClick={toggleMenu}>{t('about')}</Link>
+              <button onClick={() => handleNavClick('/about')} className="header__nav-link">{t('about')}</button>
             </li>
             <li className="header__nav-item">
-              <Link to="/contact" className="header__nav-link" onClick={toggleMenu}>{t('contact')}</Link>
+              <button onClick={() => handleNavClick('/contact')} className="header__nav-link">{t('contact')}</button>
             </li>
           </ul>
         </nav>

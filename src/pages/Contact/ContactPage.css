@@ -1,26 +1,31 @@
-.contact-page {
+.contact-page-wrapper {
   max-width: 800px;
-  margin: 120px auto 0; /* Aumentado o margin-top para dar espaço entre o header e o conteúdo */
+  margin: 0 auto;
   padding: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #F7BF3C; /* Adicionado fundo amarelo */
-  border-radius: 10px; /* Adicionado para suavizar as bordas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionado para dar um leve efeito de elevação */
 }
 
-.contact-page h1 {
+.contact-heading {
   font-family: 'Berose Demo', cursive;
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 40px;
   text-align: center;
-  color: #333; /* Adicionado para melhorar o contraste */
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-page {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #F7BF3C;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 .contact-page p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #333; /* Adicionado para melhorar o contraste */
+  color: #333;
 }
 
 .contact-page ul {
@@ -33,7 +38,7 @@
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #333; /* Adicionado para melhorar o contraste */
+  color: #333;
 }
 
 .map-container {
@@ -43,13 +48,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  .contact-page {
-    margin-top: 100px; /* Ajustado para telas menores */
-    padding: 15px; /* Reduzido o padding para telas menores */
+  .contact-heading {
+    font-size: 32px;
+    margin-top: 80px;
   }
 
-  .contact-page h1 {
-    font-size: 24px;
+  .contact-page {
+    padding: 15px;
   }
 
   .contact-page p,

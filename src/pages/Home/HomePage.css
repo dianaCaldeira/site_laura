@@ -7,13 +7,21 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+.welcome-heading {
+  font-family: 'Berose Demo', cursive;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 .home-content {
   display: flex;
   align-items: center;
   padding: 40px;
   position: relative;
   z-index: 1;
-  margin-top: 80px;
   flex-wrap: wrap;
   background-image: url('../../assets/backgroud-image.jpeg');
   background-size: cover;
@@ -32,13 +40,9 @@
   margin-bottom: 20px;
 }
 
-.home-text h1, .home-text h2, .when-to-see-neuropediatra h2, .faq-container h2, .faq-topic h3 {
+.home-text h2, .when-to-see-neuropediatra h2, .faq-container h2, .faq-topic h3 {
   font-family: 'Berose Demo', cursive;
   text-align: center;
-}
-
-.home-text h1 {
-  font-size: 30px;
 }
 
 .home-text h2 {
@@ -201,9 +205,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  .welcome-heading {
+    font-size: 32px;
+    margin-top: 80px;
+  }
+
   .home-content {
     padding: 20px;
-    margin-top: 40px;
   }
 
   .home-text {

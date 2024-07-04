@@ -9,12 +9,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-page">
+      <h1 className="welcome-heading">Bem-vindo</h1>
       <div className="home-content">
         <div className="home-image">
           <img src={Laura01} alt="Dra. Laura Thiersch" />
         </div>
         <div className="home-text">
-          <h1>Bem-vindo</h1>
           <h2>Dra. Laura Thiersch</h2>
           <ul>
             <li>Médica formada pela Universidade Federal de Minas Gerais (UFMG). </li>

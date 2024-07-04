@@ -5,6 +5,8 @@ import Laura01 from '../../assets/Laura01.png';
 import Laura02 from '../../assets/Laura02.png';
 
 const Home: React.FC = () => {
+  const whatsappLink = "https://wa.me/5531995626630";
+
   return (
     <div className="home-page">
       <div className="home-content">
@@ -20,7 +22,7 @@ const Home: React.FC = () => {
             <li>Atualmente, Neurologista Infantil no Hospital das Clínicas da Universidade Federal de Minas Gerais (HC UFMG) e Hospital Infantil Padre Anchieta.</li>
           </ul>
           <div className="button-container">
-            <Button to="/sobre" text="Saiba Mais" />
+            <Button to="/about" text="Saiba Mais" />
           </div>
         </div>
       </div>
@@ -47,7 +49,7 @@ const Home: React.FC = () => {
             <li>Doenças genéticas e metabólicas.</li>
           </ul>
           <div className="button-container">
-            <Button to="/servicos" text="Agende uma consulta" />
+            <Button to={whatsappLink} text="Agende uma consulta" />
           </div>
         </div>
       </div>
@@ -84,7 +86,7 @@ const Home: React.FC = () => {
         </div>
         <div className="button-container">
           <Button 
-            to="https://wa.me/5531XXXXXXXXX" 
+            to={whatsappLink}
             text="Agende uma consulta" 
           />
         </div>

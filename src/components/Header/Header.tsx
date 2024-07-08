@@ -59,7 +59,7 @@ const Header: React.FC = () => {
     <header className={`header ${isScrolled ? 'floating' : ''}`}>
       <div className="logo">
         <button onClick={() => handleNavClick('/')} className="logo-button">
-          <img src={Logo} alt='Logo' />
+          <img src={Logo} alt='Logo' width="200" height="50" loading="lazy" />
         </button>
       </div>
       <div className="header__content">
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
       </div>
       {showPassarinho && (
         <div className="passarinho01">
-          <img src={Passarinho01} alt='passarinho01' />
+          <img src={Passarinho01} alt='passarinho01' width="200" height="200" loading="lazy" />
         </div>
       )}
     </header>

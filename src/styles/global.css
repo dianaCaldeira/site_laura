@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Berose Demo';
   src: url('../fonts/BEROSE DEMO.TTF') format('truetype');
+  font-display: swap;
 }
 
 html, body {

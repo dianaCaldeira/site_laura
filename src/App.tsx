@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Home from './pages/Home/HomePage';
-import About from './pages/About/AboutPage';
-import Blog from './pages/Blog/Blog';
-import ContactPage from './pages/Contact/ContactPage';
 import './styles/global.css';
-import { useEffect } from 'react';
+
+// Usar lazy loading para carregar as páginas
+const Home = lazy(() => import('./pages/Home/HomePage'));
+const About = lazy(() => import('./pages/About/AboutPage'));
+const Blog = lazy(() => import('./pages/Blog/Blog'));
+const ContactPage = lazy(() => import('./pages/Contact/ContactPage'));
 
 // Componente para controlar o scroll
 const ScrollToTop = () => {
@@ -28,12 +29,14 @@ const AppContent: React.FC = () => {
     <div className="app">
       <Header />
       <main className="app-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <a href={whatsappLink} className="whatsapp-float" target="_blank" rel="noopener noreferrer">

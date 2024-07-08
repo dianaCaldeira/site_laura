@@ -15,15 +15,9 @@ fs.readdirSync(inputDir).forEach(file => {
     const outputName = path.parse(file).name;
 
     sharp(inputPath)
-      .resize(800)
+      .resize(800) // Ajuste conforme necessário
       .webp({ quality: 80 })
       .toFile(path.join(outputDir, `${outputName}.webp`))
       .then(() => console.log(`Converted ${file} to WebP`));
-    
-    sharp(inputPath)
-      .resize(800) 
-      .jpeg({ quality: 80 })
-      .toFile(path.join(outputDir, `${outputName}.jpg`))
-      .then(() => console.log(`Optimized ${file} as JPEG`));
   }
 });

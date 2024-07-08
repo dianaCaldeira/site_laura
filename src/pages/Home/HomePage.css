@@ -5,13 +5,15 @@
 
 .home-page {
   font-family: 'Times New Roman', Times, serif;
+  background: none; /* Remover qualquer fundo específico */
 }
 
 .welcome-heading {
   font-family: 'Berose Demo', cursive;
   font-size: 40px;
   text-align: center;
-  margin-top: 100px;
+  margin: 0; /* Remover margem superior */
+  padding-top: 80px; /* Adicionar padding superior para ajustar abaixo do header */
   margin-bottom: 20px;
   color: #333;
 }
@@ -23,9 +25,7 @@
   position: relative;
   z-index: 1;
   flex-wrap: wrap;
-  background-image: url('../../assets/backgroud-image.jpeg');
-  background-size: cover;
-  background-position: center;
+  background: none; /* Remover qualquer fundo específico */
 }
 
 .home-text {
@@ -93,13 +93,11 @@
   position: relative;
   z-index: 1;
   padding: 40px;
-  background-image: url('../../assets/backgroud-image.jpeg');
-  background-size: cover;
-  background-position: center;
+  background: none; /* Remover qualquer fundo específico */
 }
 
 .neuropediatra-image {
-  flex: 0 0 200px;
+  flex: 0 0 350px; /* Ajuste o tamanho para igualar à imagem laura01 */
   margin-left: 20px;
   margin-bottom: 20px;
   position: relative;

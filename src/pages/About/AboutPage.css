@@ -7,6 +7,7 @@
   margin-top: 80px;
   font-family: 'Times New Roman', Times, serif;
   padding-bottom: 60px; /* Adicionado para dar espaço ao footer */
+  background: none; /* Remover qualquer fundo específico */
 }
 
 .about-content {
@@ -25,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/backgroud-image.jpeg');
+  background: none; /* Remover qualquer fundo específico */
   background-size: cover;
   background-position: center;
   filter: blur(5px);

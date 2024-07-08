@@ -15,6 +15,13 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-image: url('../assets/backgroud-image.jpg'); /* Certifique-se de que este caminho está correto */
+  background-size: auto; /* Ajuste para o tamanho original da imagem */
+  background-repeat: repeat; /* Repetir a imagem horizontalmente e verticalmente */
+  background-position: top left; /* Iniciar a repetição do canto superior esquerdo */
+}
+
 .app {
   display: flex;
   flex-direction: column;

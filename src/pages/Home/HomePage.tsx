@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <div className="home-text">
           <h2>Dra. Laura Thiersch</h2>
           <ul>
-            <li>Médica formada pela Universidade Federal de Minas Gerais (UFMG). </li>
+            <li>Médica formada pela Universidade Federal de Minas Gerais (UFMG).</li>
             <li>Pediatra e Neurologista Infantil pelo Hospital Infantil João Paulo II (FHEMIG).</li>
             <li>Atualmente, Neurologista Infantil no Hospital das Clínicas da Universidade Federal de Minas Gerais (HC UFMG) e Hospital Infantil Padre Anchieta.</li>
           </ul>

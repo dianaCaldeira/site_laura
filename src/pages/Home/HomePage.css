@@ -16,10 +16,6 @@
   padding-top: 80px; /* Adicionar padding superior para ajustar abaixo do header */
   margin-bottom: 20px;
   color: #333;
-  background-image: url('../../assets/optimized/backgroud-image.webp'); /* Certifique-se de que este caminho está correto */
-  background-size: auto;
-  background-repeat: repeat;
-  background-position: top left;
 }
 
 .home-content {

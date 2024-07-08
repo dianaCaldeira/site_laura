@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutPage.css';
-import Laura02 from '../../assets/Laura02.png';
+import Laura02 from '../../assets/optimized/Laura02.webp';
 
 const About: React.FC = () => {
   return (

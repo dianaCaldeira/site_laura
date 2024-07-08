@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './Blog.css';
 import BlogList from './BlogList';
-import Img01 from '../../assets/Img 01.png';
-import Img02 from '../../assets/Img 02.png';
-import Img03 from '../../assets/Img 03.png';
-import Img04 from '../../assets/Img 04.png';
-import Img05 from '../../assets/Img 05.png';
+import Img01 from '../../assets/optimized/Img 01.webp';
+import Img02 from '../../assets/optimized/Img 02.webp';
+import Img03 from '../../assets/optimized/Img 03.webp';
+import Img04 from '../../assets/optimized/Img 04.webp';
+import Img05 from '../../assets/optimized/Img 05.webp';
 import { Comment, BlogPost } from '../../Type';
 
 const Blog: React.FC = () => {

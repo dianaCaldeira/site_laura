@@ -5,13 +5,12 @@ import lauraWebp from '../../assets/optimized/Laura01.webp';
 import lauraJpg from '../../assets/optimized/Laura01.jpg';
 import laura02Webp from '../../assets/optimized/Laura02.webp';
 import laura02Jpg from '../../assets/optimized/Laura02.jpg';
-import backgroundImage from '../../assets/backgroud-image.jpg';
 
 const Home: React.FC = () => {
   const whatsappLink = "https://wa.me/5531995626630";
 
   return (
-    <div className="home-page" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+    <div className="home-page">
       <h1 className="welcome-heading">SEJAM BEM-VINDOS</h1>
       <div className="home-content">
         <div className="home-image">

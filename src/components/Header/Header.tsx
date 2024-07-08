@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
-import Logo from '../../assets/Logo01.png';
+import Logo from '../../assets/optimized/Logonome.webp';
 import Passarinho01 from '../../assets/Passarinho01.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';

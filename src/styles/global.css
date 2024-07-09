@@ -16,11 +16,13 @@ html, body {
   height: 100%;
 }
 
-body:not(.home-page) { /* Aplica o fundo apenas nas páginas que não são a Home */
+body:not(.home-page) {
   background-image: url('../assets/optimized/backgroud-image.webp');
   background-size: auto;
   background-repeat: repeat;
   background-position: top left;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
 }
 
 .app {
@@ -42,7 +44,7 @@ body:not(.home-page) { /* Aplica o fundo apenas nas páginas que não são a Hom
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 50px; /* Aumentado de 40px para 50px */
+  bottom: 50px;
   right: 40px;
   background-color: #25d366;
   color: #FFF;
